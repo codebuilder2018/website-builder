@@ -23,7 +23,9 @@ app.use('/resources', express.static(path.join(__dirname, 'public')));
 app.use('views', express.static(path.join(__dirname, 'views')));
 app.set('view engine', 'hbs');
 
-const mongoUri = 'mongodb://localhost:27017/webpage_builder';
+const MONGODB_URI = 'mongodb+srv://admin:demo@website-weaver.uqouv.mongodb.net/?retryWrites=true&w=majority';
+
+const mongoUri = MONGODB_URI || 'mongodb://localhost:27017/webpage_builder';
 mongoose.connect(mongoUri, 
   {
       useNewUrlParser: true,
