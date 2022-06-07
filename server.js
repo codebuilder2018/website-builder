@@ -16,7 +16,7 @@ const corsOptions = {
   },
 };
 
-corsOptions.credentials = true;
+corsOptions.credentials = true; 
 app.use(cors(corsOptions));
 
 app.use('/resources', express.static(path.join(__dirname, 'public')));
